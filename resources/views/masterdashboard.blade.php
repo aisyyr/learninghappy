@@ -51,7 +51,7 @@
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-                <span>SMPN 96 JAKARTA</span>
+                <span>BANGUN DATAR & BANGUN RUANG</span>
             </a>
 
             <!-- Divider -->
@@ -179,7 +179,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <h1 class="h2 mt-3 text-gray-900">E-Learning SMPN 96 Jakarta</h1>
+                    <h1 class="h2 mt-3 text-gray-900">Belajar Bangun Datar & Bangun Ruang</h1>
                     <!-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
@@ -275,7 +275,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>&copy; E-Learning SMPN 96 Jakarta 2021</span>
+                        <span>&copy; Website Pembelajaran Bangun Datar & Bangun Ruang</span>
                     </div>
                 </div>
             </footer>
