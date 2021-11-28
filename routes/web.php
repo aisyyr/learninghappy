@@ -4,11 +4,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+// PELAJAR
+Route::get('/materi-bangundatar', 'PelajarController@index');
+Route::get('/latihansoal-bangundatar', 'PelajarController@latihan');
+
+Route::get('/materi-bangunruang', 'PelajarController@index2');
+Route::get('/latihansoal-bangunruang', 'PelajarController@latihan2');
+
+
+
+
+
+
+
+
+
+
 Route::get('/HalamanUtama', 'HomeeController@index');
 
 Route::get('/register2', 'Register2Controller@index');
 Route::post('/register2', 'Register2Controller@store')->name('register2');
-
 
 Auth::routes();
 

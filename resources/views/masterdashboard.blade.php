@@ -66,25 +66,25 @@
 
             @if(auth()->user()->roles == 'pelajar')
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="/materi-bangundatar">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Materi Bangun Datar</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="/latihansoal-bangundatar">
                     <i class="fas fa-fw fa-book-open"></i>
                     <span>Latihan Soal Bangun Datar</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="/materi-bangunruang">
                     <i class="fas fa-fw fa-book"></i>
                     <span>Materi Bangun Ruang</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="/latihansoal-bangunruang">
                     <i class="fas fa-fw fa-book-open"></i>
                     <span>Latihan Soal Bangun Ruang</span></a>
             </li>

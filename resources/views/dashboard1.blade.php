@@ -8,6 +8,18 @@
         @endif
     </div>
     
+    @if(auth()->user()->roles == 'pelajar')
+    <div class="wrapper wrapper--w960 ml-1">
+        <div class="card card-4">
+            <div class="card-body">
+            <!-- Page Heading -->
+            <h1 class="h3 mb-4 text-gray-700">Selamat Datang, {{ Auth::user()->name }} !</h1> <br><br>
+            <h2 class="h4 mb-4 text-gray-700">Selamat Belajar dan Tetap Semangat !</h2>
+            </div>
+        </div>
+    </div>
+    @endif
+
     @if(auth()->user()->roles == 'admin')
     <div class="wrapper wrapper--w960 ml-1">
         <div class="card card-4">
