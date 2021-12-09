@@ -15,7 +15,7 @@
 
                          <img src="{{asset('admin/images/bd1.png')}}" width="100%" height="100%" srcset="">
                          <br><br><br>
-                         <iframe src="" frameborder="2"  width="900" height="400"></iframe>
+                         <iframe src="{{ asset('file_contoh/cthsoal_bd.pdf') }}" frameborder="2"  width="900" height="400"></iframe>
                          <br><br>
                     </div>
                </div>
