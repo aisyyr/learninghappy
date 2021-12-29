@@ -27,9 +27,8 @@
             <!-- Page Heading -->
             <h1 class="h3 mb-4 text-gray-700">Selamat Datang, {{ Auth::user()->name }} !</h1> <br><br>
             <h2 class="h4 mb-4 text-gray-700">Wewenang Admin : </h2>
-            <h2 class="h4 mb-4 text-gray-700">1. Upload File Informasi Resmi Sekolah (Pada Halaman Homesite) <br> 
-                2. Membuat Kode Registrasi Pengguna (Guru & Siswa) <br> 
-                3. Mengubah atau Menambahkan Pelajaran</h2>
+            <h2 class="h4 mb-4 text-gray-700">1. Upload Latihan Soal untuk Pelajar (Pada Halaman Homesite) <br> 
+                2. Menghapus Akun Pengguna (Pelajar) <br>
             </div>
         </div>
     </div>

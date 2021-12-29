@@ -13,7 +13,6 @@
           <h1 class="h3 mb-4 text-gray-700">Homesite</h1>
 
           <div class="mt-4 card-deck">
-
                @foreach($file_informasi as $key => $file_informasi)
                <div class="col-md-4 mt-4">
                     <div class="card" style="width: 18rem;">
@@ -29,9 +28,7 @@
                     </div>
                </div>
                @endforeach
-
-               </div>
-
+          </div>
      </div>
      <!-- /.container-fluid -->
 

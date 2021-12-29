@@ -15,19 +15,27 @@ class AdminController extends Controller
 {
     public function store(Request $request)
     {
-        $nm = $request->file_doc;
-        $namaFile = $nm->getClientOriginalName();
+        // $nm = $request->file_doc;
+        // $namaFile = $nm->getClientOriginalName();
 
         $file_informasi = new File_Informasi;
         $file_informasi->file_info = $request->file_info;
         $file_informasi->keterangan = $request->keterangan;
         $file_informasi->tanggal_unggah = $request->tanggal_unggah;
-        $file_informasi->file_doc = $namaFile;
+        $file_informasi->satu = $request->satu;
+        $file_informasi->dua = $request->satu;
+        $file_informasi->tiga = $request->satu;
+        $file_informasi->empat = $request->satu;
+        $file_informasi->lima = $request->satu;
+        $file_informasi->enam = $request->satu;
+        $file_informasi->tujuh = $request->satu;
+        $file_informasi->delapan = $request->satu;
+        // $file_informasi->file_doc = $namaFile;
 
-        $nm->move(public_path().'/file_info', $namaFile);
+        // $nm->move(public_path().'/file_info', $namaFile);
         $file_informasi->save();
 
-        return redirect('/homesite-admin')->with('success', 'File Informasi berhasil diunggah!');
+        return redirect('/homesite-admin')->with('success', 'Latihan Soal berhasil diunggah!');
     }
 
         // $request->validate([
@@ -63,7 +71,16 @@ class AdminController extends Controller
         $request->validate([
             'file_info' => 'required',
             'keterangan' => 'required',
-            'tanggal_unggah' => 'required'
+            'tanggal_unggah' => 'required',
+            // 'satu' => '',
+            // 'dua' => '',
+            // 'tiga' => '',
+            // 'empat' => '',
+            // 'lima' => '',
+            // 'enam' => '',
+            // 'tujuh' => '',
+            // 'delapan' => ''
+
         ]);
 
         $query = DB::table('file_informasi')
@@ -71,16 +88,24 @@ class AdminController extends Controller
                     ->update([
                         'file_info' => $request['file_info'],
                         'keterangan' => $request['keterangan'],
-                        'tanggal_unggah' => $request['tanggal_unggah']
+                        'tanggal_unggah' => $request['tanggal_unggah'],
+                        'satu' => $request['satu'],
+                        'dua' => $request['dua'],
+                        'tiga' => $request['tiga'],
+                        'empat' => $request['empat'],
+                        'lima' => $request['lima'],
+                        'enam' => $request['enam'],
+                        'tujuh' => $request['tujuh'],
+                        'delapan' => $request['delapan']
                     ]);
 
-        return redirect('/homesite-admin')->with('success', 'File Informasi Berhasil di Ubah!');
+        return redirect('/homesite-admin')->with('success', 'Latihan Soal Berhasil di Ubah!');
     }
 
     public function destroy($id)
     {
         $query = DB::table('file_informasi')->where('id', $id)->delete();
-        return redirect('/homesite-admin')->with('success', 'File Informasi Berhasil di Hapus!');
+        return redirect('/homesite-admin')->with('success', 'Latihan Soal Berhasil di Hapus!');
     }
 
     public function upload()
@@ -88,16 +113,17 @@ class AdminController extends Controller
         return view('admin.adm-upload');
     }
 
+    //penggunga akun pelajar
     public function pengguna1()
     {
-        $users = DB::table('users')->get()->where('roles', 'guru');
+        $users = DB::table('users')->get()->where('roles', 'pelajar');
         return view('admin.admpengguna', compact('users'));
     }
 
     public function destroyguru($name)
     {
         $query = DB::table('users')->where('name', $name)->delete();
-        return redirect('/pengguna-guru')->with('success', 'Akun Guru Berhasil di Hapus!');
+        return redirect('/pengguna-guru')->with('success', 'Akun Pengguna Berhasil di Hapus!');
     }
 
     public function pengguna2()
@@ -109,36 +135,39 @@ class AdminController extends Controller
     public function destroysiswa($name)
     {
         $query = DB::table('users')->where('name', $name)->delete();
-        return redirect('/pengguna-siswa')->with('success', 'Akun Siswa Berhasil di Hapus!');
+        return redirect('/pengguna-siswa')->with('success', 'Akun Pengguna Berhasil di Hapus!');
     }
 
     public function kodereg()
     {
-        $kode_registrasi = DB::table('kode_registrasi')->get();
-        return view('admin.admkodereg', compact('kode_registrasi'));
+        $latihansoal = DB::table('latihansoal')->get();
+        $file_informasi = DB::table('file_informasi')->get();
+
+        return view('admin.admkodereg', compact('latihansoal', 'file_informasi'));
     }
 
+    //PENILAIAN
     public function edit2($id)
     {
-        $kode_registrasi = DB::table('kode_registrasi')->where('id', $id)->first();
-        return view('admin.admkodereg-edit', compact('kode_registrasi'));
+        $latihansoal = DB::table('latihansoal')->where('id', $id)->first();
+        $file_informasi = DB::table('file_informasi')->get();
+
+        return view('admin.admkodereg-edit', compact('latihansoal', 'file_informasi'));
     }
 
-    public function update2($hak_akses, Request $request)
+    public function update2($id, Request $request)
     {
-        $request->validate([
-            'hak_akses' => 'required',
-            'kode_regist' => 'required|max:10',
-        ]);
+        // $request->validate([
+            
+        // ]);
 
-        $query = DB::table('kode_registrasi')
-                    ->where('hak_akses', $hak_akses)
+        $query = DB::table('latihansoal')
+                    ->where('id', $id)
                     ->update([
-                        'hak_akses' => $request['hak_akses'],
-                        'kode_regist' => $request['kode_regist']
+                        'nilai' => $request['nilai']
                     ]);
 
-        return redirect('/koderegistrasi')->with('success', 'Kode Registrasi Berhasil di Ubah!');
+        return redirect('/penilaian')->with('success', 'Penilaian Berhasil dilakukan!');
     }
 
 

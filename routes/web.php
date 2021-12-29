@@ -8,6 +8,7 @@ Route::get('/', function () {
 // PELAJAR
 Route::get('/materi-bangundatar', 'PelajarController@index');
 Route::get('/latihansoal-bangundatar', 'PelajarController@latihan');
+Route::post('/latihansoal-bangundatar', 'PelajarController@store');
 
 Route::get('/materi-bangunruang', 'PelajarController@index2');
 Route::get('/latihansoal-bangunruang', 'PelajarController@latihan2');
@@ -44,15 +45,15 @@ Route::get('/homesite-admin/{id}/edit', 'AdminController@edit');
 Route::put('/homesite-admin/{id}', 'AdminController@update');
 Route::delete('/homesite-admin/{id}', 'AdminController@destroy');
 
-Route::get('/pengguna-guru', 'AdminController@pengguna1');
-Route::delete('/pengguna-guru/{name}', 'AdminController@destroyguru');
+Route::get('/pengguna-pelajar', 'AdminController@pengguna1');
+Route::delete('/pengguna-pelajar/{name}', 'AdminController@destroyguru');
 
 Route::get('/pengguna-siswa', 'AdminController@pengguna2');
 Route::delete('/pengguna-siswa/{name}', 'AdminController@destroysiswa');
 
-Route::get('/koderegistrasi', 'AdminController@kodereg');
-Route::get('/koderegistrasi/{id}/edit', 'AdminController@edit2');
-Route::put('/koderegistrasi/{id}', 'AdminController@update2');
+Route::get('/penilaian', 'AdminController@kodereg');
+Route::get('/penilaian/{id}/edit', 'AdminController@edit2');
+Route::put('/penilaian/{id}', 'AdminController@update2');
 
 Route::get('/pelajaran', 'AdminController@pelajaran');
 Route::post('/pelajaran', 'AdminController@store2');

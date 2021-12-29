@@ -94,26 +94,26 @@
             <li class="nav-item">
                 <a class="nav-link" href="/homesite-admin">
                     <i class="fas fa-fw fa-home"></i>
-                    <span>Homesite</span></a>
+                    <span>Latihan Soal</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="/pengguna-guru">
+                <a class="nav-link" href="/penilaian">
+                    <i class="fas fa-fw fa-key"></i>
+                    <span>Penilaian</span></a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" href="/pengguna-pelajar">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Pengguna</span></a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/koderegistrasi">
-                    <i class="fas fa-fw fa-key"></i>
-                    <span>Kode Registrasi</span></a>
-            </li>
-
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="/pelajaran">
                     <i class="fas fa-fw fa-book-open"></i>
                     <span>Pelajaran</span></a>
-            </li>
+            </li> -->
             @endif
 
 
