@@ -27,7 +27,7 @@
                @foreach($file_informasi as $key => $file_informasi)
                <div class="col-md-4 mt-2">
                     <div class="card" style="width: 18rem;">
-                         <img src="{{asset('admin/img/book.png')}}" class="card-img-top" alt="...">
+                         <img src="{{asset('admin/img/books.png')}}" class="card-img-top" alt="...">
                          <div class="card-body">
                               <h5 class="card-title">{{ $file_informasi->file_info }}</h5>
                               <p class="card-text">{{ $file_informasi->keterangan }}</p>

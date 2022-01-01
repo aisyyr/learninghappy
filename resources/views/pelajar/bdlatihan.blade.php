@@ -16,9 +16,8 @@
 
                @foreach($file_informasi as $key => $file_informasi)
                <div class="col-md-4 mt-4">
-               @if($file_informasi->keterangan == 'Bangun Datar')
                     <div class="card" style="width: 18rem;">
-                         <img src="{{asset('admin/img/book.png')}}" class="card-img-top" alt="...">
+                         <img src="{{asset('admin/img/open-book.png')}}" class="card-img-top" alt="...">
                          <div class="card-body">
                               <h5 class="card-title">{{ $file_informasi->file_info }}</h5>
                               <p class="card-text">{{ $file_informasi->keterangan}}</p>
@@ -28,7 +27,6 @@
                               </div>
                          </div>
                     </div>
-               @endif
                </div>
                @endforeach
 
@@ -36,14 +34,15 @@
 
           <div class="wrapper wrapper--w960 ml-1">
           <h4>List Nilai Pelajar - Latihan Soal Bangun Datar</h4><br>
+          
           <div class="card card-4">
-          @if($file_informasi->keterangan == 'Bangun Datar')
                <div class="card-body"><br>
                     <table class="table table-bordered">
                     <thead>
                     <tr>
                          <th>Nama Pelajar</th>
                          <td>Latihan Ke - </td>
+                         <td>Tipe</td>
                          <th>Nilai</th>
                     </tr>
                     </thead>
@@ -52,14 +51,15 @@
                          <tr>
                               <td> {{$latihansoal->nama_pengguna}} </td>
                               <td> {{$latihansoal->latihan_ke}} </td>
+                              <td> {{$latihansoal->jenis_bangun}}</td>
                               <td> {{ $latihansoal->nilai }} </td>
                          </tr>
                     @endforeach
                     </tbody>
                     </table>
                </div>
-          @endif
           </div>
+
           </div>
 
      </div>

@@ -38,8 +38,8 @@ class PelajarController extends Controller
 
     public function latihan()
     {
-        $file_informasi = DB::table('file_informasi')->get();
-        $latihansoal = DB::table('latihansoal')->get();
+        $file_informasi = DB::table('file_informasi')->get()->where('keterangan', 'Bangun Datar');
+        $latihansoal = DB::table('latihansoal')->get()->where('jenis_bangun', 'Bangun Datar');
         return view('pelajar.bdlatihan', compact('file_informasi', 'latihansoal'));
         
         // $pelajaran = \App\Pelajaran::all();
@@ -57,8 +57,8 @@ class PelajarController extends Controller
 
     public function latihan2()
     {
-        $latihansoal = DB::table('latihansoal')->get();
-        $file_informasi = DB::table('file_informasi')->get();
+        $latihansoal = DB::table('latihansoal')->get()->where('jenis_bangun', 'Bangun Ruang');
+        $file_informasi = DB::table('file_informasi')->get()->where('keterangan', 'Bangun Ruang');
         
         return view('pelajar.brlatihan', compact('file_informasi', 'latihansoal'));
     }
