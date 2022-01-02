@@ -120,10 +120,11 @@ class AdminController extends Controller
         return view('admin.admpengguna', compact('users'));
     }
 
+    //hapus pengguna pelajar
     public function destroyguru($name)
     {
         $query = DB::table('users')->where('name', $name)->delete();
-        return redirect('/pengguna-guru')->with('success', 'Akun Pengguna Berhasil di Hapus!');
+        return redirect('/pengguna-pelajar')->with('success', 'Akun Pengguna Berhasil di Hapus!');
     }
 
     public function pengguna2()

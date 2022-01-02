@@ -10,7 +10,7 @@
           <div class="container-fluid">
 
                <!-- Page Heading -->
-               <h1 class="h3 mb-4 text-gray-700">Homesite</h1>
+               <h1 class="h3 mb-4 text-gray-700">Latihan Soal</h1>
 
                <a type="file" href="/homesite-upload" class="btn btn-primary btn-icon-split btn-sm mb-4">
                     <span class="text">&nbsp;&nbsp;&nbsp;(+) Unggah Latihan Soal & Kuis&nbsp;&nbsp;&nbsp;</span>
